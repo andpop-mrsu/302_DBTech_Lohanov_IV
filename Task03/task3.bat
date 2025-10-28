@@ -33,7 +33,11 @@ echo.
 echo ======================================================================
 echo 5. Вывести список самых свежих фильмов. В список должны войти все фильмы последнего года выпуска, имеющиеся в базе данных.
 echo ----------------------------------------------------------------------
+<<<<<<< HEAD
 sqlite3 movies_rating.db -box -echo "SELECT id, title, year, genres FROM movies WHERE year = (SELECT MAX(year) FROM movies) ORDER BY title;"
+=======
+sqlite movies_rating.db -box -echo "SELECT id, title, year, genres FROM movies WHERE year = (SELECT MAX(year) FROM movies) ORDER BY title;"
+>>>>>>> student/Task04
 echo.
 
 echo ======================================================================
